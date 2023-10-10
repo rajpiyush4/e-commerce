@@ -11,7 +11,7 @@ import { ShoppingCart } from 'lucide-react'
 import AddToCart from "./addToCart"
 import { useEffect } from "react"
 
-function index() {
+function Index() {
     useEffect(()=>{
         const cart=()=>{
 
@@ -41,4 +41,4 @@ function index() {
     )
 }
 
-export default index
+export default Index

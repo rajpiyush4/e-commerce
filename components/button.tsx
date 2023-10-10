@@ -4,7 +4,7 @@ import { experimental_useFormStatus as useFormStatus } from "react-dom"
 import {Plus} from 'lucide-react'
 
 
-function button() {
+function Button() {
     const { pending } = useFormStatus()
     return (
         <>
@@ -13,4 +13,4 @@ function button() {
     )
 }
 
-export default button
+export default Button

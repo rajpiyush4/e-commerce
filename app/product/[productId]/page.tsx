@@ -4,7 +4,7 @@ import SingleProduct from '@/components/singleProduct'
 import { useSearchParams } from 'next/navigation'
 
 
-function page({ params: name }: { params: { productId: string } }) {
+function Product({ params: name }: { params: { productId: string } }) {
   const params = useSearchParams()
   const selectedColor = params.get('color')
 
@@ -17,4 +17,4 @@ function page({ params: name }: { params: { productId: string } }) {
 
 }
 
-export default page
+export default Product

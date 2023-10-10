@@ -11,7 +11,7 @@ function header() {
             <div className="flex gap-8 items-center">
                 <nav>
                     <ul className="flex gap-6">
-                        <li className="text-[#fff] font-bold"><Link href='/'>Vercel Store</Link></li>
+                        <li className="text-[#fff] font-bold"><Link href='/'>A Store</Link></li>
                         <li>All</li>
                         <li>Search</li>
                         <li>Stickers</li>
