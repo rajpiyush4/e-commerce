@@ -1,3 +1,4 @@
+
 import {addToCart} from "@/actions/addToCart"
 import Image from "next/image"
 import Link from 'next/link'
@@ -27,6 +28,7 @@ async function page({ id, selectedColor }: { id: string, selectedColor: string |
           {color.map((item: string, key: number) => <Link scroll={false} href={`/product/${id}/?color=${item}`} key={key} className={`text-sm hover:border-blue-500 hover:scale-105 transition-all bg-gray border-[1px] ${selectedColor == item ? 'border-blue-500' : 'border-stone-100/25'} p-2 rounded-[50px] text-white`}>{item}</Link>)}
         </div>
         <form action={async (formData: FormData) => {
+          'use server'
           const data = await addToCart({ products: [{ id: parseInt(product.id), quantity: 1 }] });
           console.log(data)
         }}>

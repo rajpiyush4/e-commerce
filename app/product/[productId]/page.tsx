@@ -1,20 +1,21 @@
-'use client'
+'use server'
 
 import SingleProduct from '@/components/singleProduct'
-import { useSearchParams } from 'next/navigation'
 
 
-function Product({ params: name }: { params: { productId: string } }) {
-  const params = useSearchParams()
-  const selectedColor = params.get('color')
+function Product({ searchParams, params }: { searchParams: { color
+  : string }, params: {productId:string} }) {
+  const selectedColor = searchParams.color || 'black'
+
 
 
   return (
     <>
-      <SingleProduct id={name.productId} selectedColor={selectedColor} />
+      <SingleProduct id={params.productId} selectedColor={selectedColor} />
     </>
   )
 
 }
+
 
 export default Product
